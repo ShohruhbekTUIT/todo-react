@@ -4,6 +4,8 @@ import TodoItem from './Components/TodoItem';
 import Select from './Components/Select/main';
 import Localization from './Assets/Localization/Localization';
 import './Assets/main.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	const elSelect = useRef();
@@ -24,6 +26,7 @@ function App() {
 			window.localStorage.setItem('todos', JSON.stringify([...todos, newTodo]));
 			SetTodos([...todos, newTodo]);
 			evt.target.value = '';
+			toast.warning("Todo qo'shildi!");
 		}
 	};
 
@@ -33,6 +36,7 @@ function App() {
 		const filteredTodos = todos.filter((item) => item.id !== deleteId);
 		window.localStorage.setItem('todos', JSON.stringify(filteredTodos));
 		SetTodos(filteredTodos);
+		toast.error("Todo o'chirildi!");
 	};
 
 	const editTodo = (evt) => {
@@ -44,6 +48,7 @@ function App() {
 		filteredTodo.title = edittodo;
 		window.localStorage.setItem('todos', JSON.stringify([...todos]));
 		SetTodos([...todos]);
+		toast.info("Todo o'zgartirildi!");
 	};
 
 	const handleCompleted = (evt) => {
@@ -52,6 +57,9 @@ function App() {
 		findedItem.isCompleted = !findedItem.isCompleted;
 		window.localStorage.setItem('todos', JSON.stringify(todos));
 		SetTodos([...todos]);
+		if (findedItem.isCompleted) {
+			toast.success('Todo bajarildi!');
+		}
 	};
 	const renderActive = () => {
 		const filterActiv = JSON.parse(window.localStorage.getItem('todos')).filter(
@@ -130,6 +138,7 @@ function App() {
 					</button>
 				</div>
 			</div>
+			<ToastContainer />
 		</>
 	);
 }
