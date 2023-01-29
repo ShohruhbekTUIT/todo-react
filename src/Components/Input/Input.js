@@ -1,4 +1,12 @@
-const Input = ({ handleInput,placeholder }) => {
-  return <input className="siteInput" onKeyUp={handleInput} type="text" aria-label="Todo..." placeholder={placeholder}/>;
+const Input = ({ handleInput, placeholder }) => {
+	return (
+		<input
+			className='siteInput form-control'
+			onKeyUp={handleInput}
+			type='text'
+			aria-label='Todo...'
+			placeholder={placeholder}
+		/>
+	);
 };
 export default Input;

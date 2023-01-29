@@ -1,37 +1,43 @@
-*{
+* {
   vertical-align: middle;
 }
-body{
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#root{
+
+#root {
   display: inline-block;
-  border:5px solid black;
+  border: 5px solid black;
   padding: 20px;
   margin-top: 10px;
   box-shadow: 0px 0px 15px 3px black;
 }
-.siteTitle{
+
+.siteTitle {
   text-align: center;
   color: aquamarine;
 }
-.site-logo{
+
+.site-logo {
   margin-left: 10px;
 }
-.siteInput{
+
+.siteInput {
   display: inline;
-  margin: 0 auto;
-  width: 250px;
-  height: 25px;
+  /* margin: 0 auto; */
+  /* width: 250px;
+  height: 25px; */
   border: 4px solid green;
   border-radius: 10px;
-  padding: 7px 10px;
-  margin-bottom: 50px;
+  /* padding: 20px 10px; */
+  /* margin-bottom: 50px; */
   margin-left: 24px;
 }
-.siteList{
+
+.siteList {
   margin: 0;
   padding: 0;
   display: flex;
@@ -40,7 +46,8 @@ body{
   flex-direction: column;
   font-size: x-large;
 }
-.siteItem{
+
+.siteItem {
   padding: 8px;
   width: 400px !important;
   color: rgb(241, 252, 89);
@@ -50,17 +57,21 @@ body{
   margin-bottom: 15px;
 }
 
-.checkbox{
-  width: 15px;height: 15px;
+.checkbox {
+  width: 15px;
+  height: 15px;
 }
-.completed{
+
+.completed {
   text-decoration: line-through;
 }
-.checkbtn{
+
+.checkbtn {
   display: flex;
   align-items: center;
 }
-.siteBtn{
+
+.siteBtn {
   background-color: red;
   margin-left: 6px;
   font-size: 14px;
@@ -68,43 +79,52 @@ body{
   padding: 5px;
   border-radius: 7px;
 }
-.site-lang{
-  border: 4px solid green;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 10px;
-  margin-bottom: 50px;
-  margin-left: 15px;
+
+.site-lang {
+  max-width: 120px;
+  vertical-align: middle;
+  /* border-radius: 10px; */
+  /* font-size: 15px; */
+  /* font-weight: 600; */
+  /* padding: 10px; */
+  /* margin-bottom: 50px; */
+  /* margin-left: 15px; */
 }
-.site-btns{
+
+.site-btns {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.site-todo{
+
+.site-todo {
   padding: 4px;
   border-radius: 5px;
   color: red;
   background-color: aliceblue;
 }
-.site-todo:hover{
-  border:2px solid black; 
+
+.site-todo:hover {
+  border: 2px solid black;
   box-shadow: 0px 0px 10px 2px black;
 }
-.btn{
+
+.btn {
   color: red;
-  border:2px solid green; 
+  border: 2px solid green;
   background-color: transparent;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 600;
   margin-left: 10px;
-  padding: 8px;;
+  padding: 8px;
+  ;
 }
-.btn:hover{
+
+.btn:hover {
   box-shadow: 0px 0px 10px 2px green;
 }
-.btn:nth-child(1){
+
+.btn:nth-child(1) {
   margin-left: 100px;
 }
